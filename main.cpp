@@ -11,6 +11,7 @@
 struct student
 {
     int age;
+    int number;
     char name[100];
     student *next;
 };
@@ -28,13 +29,13 @@ int main(int argc, const char * argv[]) {
         q=new student;
         p->next=q;
         q->next=0;
-        scanf("%s %d",q->name,&(q->age));
+        scanf("%s %d %d",q->name,&(q->age),&(q->number));
         p=q;
     }
     p=head->next;
     while(p!=0)
     {
-        printf("%s%d\n",p->name,p->age);
+        printf("%s%d%d\n",p->name,p->age,p->number);
         p=p->next;
     }
     
